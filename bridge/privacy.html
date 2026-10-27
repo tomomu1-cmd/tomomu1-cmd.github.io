@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー | AI Studio Bridge TEST2</title>
+  <style>body{max-width:760px;margin:48px auto;padding:0 22px;font:17px/1.85 system-ui,sans-serif;color:#243344;background:#f7f9fb}main{background:white;padding:clamp(20px,5vw,44px);border-radius:16px}h1{font-size:clamp(25px,5vw,32px);line-height:1.4}h2{font-size:21px;margin-top:30px}a{color:#1559a6;overflow-wrap:anywhere}code{overflow-wrap:anywhere}footer{margin-top:30px;font-size:14px;color:#566579}</style>
+</head>
+<body><main>
+  <p><a href="index.html">AI Studio Bridge TEST2 ホーム</a></p>
+  <h1>プライバシーポリシー</h1>
+  <p>対象アプリ: AI Studio Bridge TEST2<br>運用者: GitHub アカウント tomomu1-cmd（本人運用）<br>更新日: 2026年10月27日</p>
+  <h2>1. 利用者と目的</h2>
+  <p>本アプリは運用者本人だけが使う個人用の同期ツールです。本人が選択した TEST2 用 Google ドキュメントの作業指示を読み、既存の作業記録と照合し、進捗文書へ受領・進捗・保留などを追記するためにデータを扱います。</p>
+  <h2>2. アクセスするデータと OAuth</h2>
+  <p>本人が Google の正式な同意・ファイル選択を通して許可した既存 2 文書の本文、文書 ID、タブ ID、改訂情報を扱います。要求する Google API 権限は <code>https://www.googleapis.com/auth/drive.file</code> のみです。現在の実装では対象 2 文書を固定し、指示文書は読取りのみ、進捗文書は末尾への追記と保存結果の読戻しに制限します。文書の削除や履歴整理は行いません。</p>
+  <p>定期処理を本人の再操作なしで続けるため、オフラインアクセスを使用します。アクセス用・更新用トークンと専用 OAuth クライアント設定を、本人の Windows ユーザーに結び付く DPAPI で暗号化し、本人専用アクセス制限のある領域へ保存します。Google のパスワードは取得・保存しません。</p>
+  <h2>3. 保存場所・ログ・保管期間</h2>
+  <p>作業指示と進捗本文は本人管理の Google ドキュメントに保存します。文書本文は処理中にメモリ上で扱い、Bridge の同期状態には処理済みメッセージ ID、照合用ハッシュ、関連する作業 ID、時刻などを保存します。実行結果・エラー分類・照合記録は本人管理の Windows および既存の Google Drive 作業記録に保持します。認証情報の値をログや公開ページへ記録しません。</p>
+  <p>自動で一定期間後に削除する仕組みは現在設けていません。作業記録は本人が運用・確認・復旧に必要とする期間保持し、整理・削除は本人の判断で行います。認証情報は利用継続中に保持し、不要になった場合は本人が認可を取り消し、専用保管データを削除できます。</p>
+  <h2>4. 外部サービスとデータ提供</h2>
+  <p>Google の認証・トークン更新と Google Docs API を利用し、選択された文書の読取り・追記を行います。認可の失効などで接続を停止する場合は、既存の ntfy 通知経路へ接続停止と再認可の必要性だけを通知します。この通知に文書本文やトークンの値は含めません。</p>
+  <p>本アプリは Google ユーザーデータを販売せず、広告や一般向けの分析に利用しません。Bridge の同期処理から文書本文を外部 AI API へ送信する機能はありません。本人が別途利用する AI チャットやコネクタを通じた閲覧・利用は、そのサービス側の設定と規約に従います。</p>
+  <p>この案内サイトは GitHub Pages で配信します。ページに独自のアクセス解析、広告、ログインフォームは設置していません。GitHub および Google など各サービス自体による情報の取扱いは、各社のプライバシーポリシーに従います。</p>
+  <h2>5. Google データの利用制限</h2>
+  <p>本アプリによる Google API から受け取った情報の利用および他のアプリへの転送は、Limited Use の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に従います。Google 文書の内容を汎用 AI・機械学習モデルの学習に使用する機能はありません。</p>
+  <h2>6. 認可の取消・削除</h2>
+  <p><a href="https://myaccount.google.com/connections">Google アカウントの接続管理</a>から本アプリへのアクセスを取り消せます。認可を取り消すと、その認可による同期は継続できなくなります。取消は Google ドキュメントや既存の作業記録の自動削除を意味しません。文書・処理記録・専用暗号化保管データの削除が必要な場合は、本人が既存運用の手順で行います。他アプリの認証情報には触れません。</p>
+  <h2>7. 問い合わせ・変更</h2>
+  <p>本アプリとデータの取扱いについての問い合わせ先: <a href="mailto:tomomu1@gmail.com">tomomu1@gmail.com</a>。取扱いを変更する場合は、このページの内容と更新日を更新します。</p>
+  <footer><a href="index.html">ホーム</a> · <a href="index.html#terms">利用条件</a></footer>
+</main></body>
+</html>
