@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Studio Bridge TEST2</title>
+  <style>body{max-width:760px;margin:48px auto;padding:0 22px;font:17px/1.85 system-ui,sans-serif;color:#243344;background:#f7f9fb}main{background:white;padding:clamp(20px,5vw,44px);border-radius:16px}h1{font-size:clamp(25px,5vw,34px);line-height:1.4}h2{font-size:21px;margin-top:30px}a{color:#1559a6;overflow-wrap:anywhere}code{overflow-wrap:anywhere}footer{margin-top:30px;font-size:14px;color:#566579}</style>
+</head>
+<body><main>
+  <h1>AI Studio Bridge TEST2</h1>
+  <p>運用者本人の作業指示と進捗を、Google ドキュメントと本人の Windows 上の Bridge の間で同期する個人用ツールです。一般向けの利用登録や配布は行っていません。</p>
+  <h2>できること</h2>
+  <p>本人が Google の同意画面とファイル選択画面で許可した TEST2 用の既存 2 文書を読み、既存の作業記録に対応する受領・進捗・保留などを進捗文書の末尾に追記します。Bridge は指示文書を変更しません。同じ記録の二重追記を防ぐため、保存結果を読み戻して確認します。</p>
+  <h2>Google へのアクセス</h2>
+  <p>Google OAuth の <code>drive.file</code> 権限だけを使用します。この権限は、アプリで選択・利用するファイルに対する権限です。権限自体にはファイルの作成・編集・削除も含まれますが、現在の Bridge 実装は対象を TEST2 の 2 文書に固定し、書込みを進捗文書への追記だけに制限しています。ドライブ全体へのアクセス権限は要求しません。</p>
+  <p>定期同期のため、本人の同意に基づくオフラインアクセスとトークン更新を使用します。認証情報は本人の Windows ユーザーに結び付けて暗号化保管します。通常プロジェクトへの展開、文書の履歴整理・削除、正式な作業受付への切替は現在の対象に含みません。</p>
+  <h2>データの取扱い</h2>
+  <p>同期する作業記録は本人の Google ドキュメントに保存し、処理済み ID や実行結果は本人管理の記録として保持します。Google ユーザーデータを販売したり、広告目的で利用したりしません。保存・外部サービス・認可取消については、<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <h2 id="terms">利用条件</h2>
+  <p>運用者本人が、自分の Google アカウントと選択した TEST2 文書に対して使用するツールです。他人のアカウントや文書を無断で扱う用途には提供しません。Google へのアクセスは本人の同意に基づき、いつでも取り消せます。通信や認可に問題がある場合は同期が停止することがあります。</p>
+  <h2>運用・問い合わせ</h2>
+  <p>運用者: GitHub アカウント <a href="https://github.com/tomomu1-cmd">tomomu1-cmd</a>（本人運用）<br>問い合わせ: <a href="mailto:tomomu1@gmail.com">tomomu1@gmail.com</a></p>
+  <footer>更新日: 2026年10月27日<br><a href="privacy.html">プライバシーポリシー</a> · <a href="#terms">利用条件</a></footer>
+</main></body>
+</html>
